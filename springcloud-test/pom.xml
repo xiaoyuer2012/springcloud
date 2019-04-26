@@ -5,9 +5,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.demo</groupId>
-    <artifactId>springcloudTest</artifactId>
+    <artifactId>springcloud-test</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.4.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
     <modules>
         <module>service</module>
     </modules>
