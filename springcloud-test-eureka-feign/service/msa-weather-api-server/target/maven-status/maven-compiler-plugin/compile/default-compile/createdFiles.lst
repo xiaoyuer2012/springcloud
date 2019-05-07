@@ -1,7 +1,0 @@
-com\demo\springcloud\weather\weatherDataServerApi\vo\Yesterday.class
-com\demo\springcloud\weather\weatherDataServerApi\vo\WeatherResponse.class
-com\demo\springcloud\weather\weatherDataServerApi\vo\Weather.class
-com\demo\springcloud\weather\weatherDataServerApi\WeatherDataClient.class
-com\demo\springcloud\weather\cityServerApi\vo\CityVo.class
-com\demo\springcloud\weather\weatherDataServerApi\vo\Forecast.class
-com\demo\springcloud\weather\cityServerApi\CityClient.class

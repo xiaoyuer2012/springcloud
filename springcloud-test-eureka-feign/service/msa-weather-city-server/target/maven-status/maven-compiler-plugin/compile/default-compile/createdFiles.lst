@@ -1,8 +1,0 @@
-com\demo\springcloud\weather\service\CityDataService.class
-com\demo\springcloud\weather\controller\CityController.class
-com\demo\springcloud\weather\service\CityDataServiceImpl.class
-com\demo\springcloud\weather\SpringcloudApplication.class
-com\demo\springcloud\weather\vo\CityList.class
-com\demo\springcloud\weather\controller\HelloController.class
-com\demo\springcloud\weather\util\XmlBuilder.class
-com\demo\springcloud\weather\vo\City.class
