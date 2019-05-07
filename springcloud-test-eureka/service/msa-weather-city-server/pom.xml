@@ -13,4 +13,8 @@
     <artifactId>msa-weather-city-server</artifactId>
     <packaging>jar</packaging>
 
+    <dependencies>
+
+    </dependencies>
+
 </project>
