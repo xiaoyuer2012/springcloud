@@ -23,6 +23,7 @@
         <module>eureka-server</module>
         <module>zuul-server</module>
         <module>comfig-server</module>
+        <module>config-client</module>
     </modules>
     <dependencies>
         <dependency>
