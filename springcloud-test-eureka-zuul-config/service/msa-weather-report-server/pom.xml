@@ -19,7 +19,12 @@
         </dependency>
         <dependency>
             <groupId>com.demo</groupId>
-            <artifactId>msa-weather-api-server</artifactId>
+            <artifactId>msa-weather-city-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.demo</groupId>
+            <artifactId>msa-weather-data-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>

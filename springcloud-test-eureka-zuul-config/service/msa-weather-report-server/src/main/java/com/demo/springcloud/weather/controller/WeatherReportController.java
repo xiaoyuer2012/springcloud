@@ -2,8 +2,8 @@ package com.demo.springcloud.weather.controller;
 
 import java.util.List;
 
-import com.demo.springcloud.weather.api.ApiClient;
-import com.demo.springcloud.weather.api.vo.CityVo;
+import com.demo.springcloud.weather.CityClientApi;
+import com.demo.springcloud.weather.vo.CityVo;
 import com.demo.springcloud.weather.service.WeatherReportService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,7 +27,7 @@ public class WeatherReportController {
 	@Autowired
 	private WeatherReportService weatherReportService;
 	@Autowired
-	private ApiClient apiClient;
+	private CityClientApi apiClient;
 
 	@GetMapping("/cityId/{cityId}")
 	public ModelAndView getReportByCityId(@PathVariable("cityId") String cityId, Model model) throws Exception {

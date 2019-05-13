@@ -1,8 +1,8 @@
 package com.demo.springcloud.weather.service;
 
-import com.demo.springcloud.weather.api.ApiClient;
-import com.demo.springcloud.weather.api.vo.Weather;
-import com.demo.springcloud.weather.api.vo.WeatherResponse;
+import com.demo.springcloud.weather.DataApiClient;
+import com.demo.springcloud.weather.vo.Weather;
+import com.demo.springcloud.weather.vo.WeatherResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -18,7 +18,7 @@ public class WeatherReportServiceImpl implements WeatherReportService {
 	@Autowired
 	private RestTemplate restTemplate;
 	@Autowired
-	private ApiClient apiClient;
+	private DataApiClient apiClient;
 	@Override
 	public Weather getDataByCityId(String cityId) {
 		// TODO 改为由天气数据API微服务来提供数据

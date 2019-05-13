@@ -1,5 +1,6 @@
 package com.demo.springcloud.weather.service;
-import com.demo.springcloud.weather.api.vo.Weather;
+
+import com.demo.springcloud.weather.vo.Weather;
 
 /**
  * 天气预报服务.

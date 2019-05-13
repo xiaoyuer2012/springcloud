@@ -15,46 +15,55 @@
 <body>
 
 	<div class="container">
+
 		<div class="row">
 			<h3 th:text="${reportModel.title}">waylau</h3>
 			<select class="custom-select" id="selectCityId">
 				<option th:each="city : ${reportModel.cityList}"
-					th:value="${city.cityId}" th:text="${city.cityName}"
-					th:selected="${city.cityId eq reportModel.cityId}">Volvo</option>
+						th:value="${city.cityId}" th:text="${city.cityName}"
+						th:selected="${city.cityId eq reportModel.cityId}">Volvo</option>
 			</select>
 		</div>
-		<div class="row">
-			<h1 class="text-success" th:text="${reportModel.report.city}"></h1>
-		</div>
-		<div class="row">
-			<p>
-				空气质量指数：<span th:text="${reportModel.report.aqi}"></span>
-			</p>
-		</div>
-		<div class="row">
-			<p>
-				当前温度：<span th:text="${reportModel.report.wendu}"></span>
-			</p>
-		</div>
-		<div class="row">
-			<p>
-				温馨提示：<span th:text="${reportModel.report.ganmao}"></span>
-			</p>
+		<div th:if="${reportModel.report}!=null">
+			<div class="row">
+				<h1 class="text-success" th:text="${reportModel.report.city}"></h1>
+			</div>
+			<div class="row">
+				<p>
+					空气质量指数：<span th:text="${reportModel.report.aqi}"></span>
+				</p>
+			</div>
+			<div class="row">
+				<p>
+					当前温度：<span th:text="${reportModel.report.wendu}"></span>
+				</p>
+			</div>
+			<div class="row">
+				<p>
+					温馨提示：<span th:text="${reportModel.report.ganmao}"></span>
+				</p>
 
-		</div>
+			</div>
 
 
-		<div class="row">
-			<div class="card border-info" th:each="forecast : ${reportModel.report.forecast}">
-				<div class="card-body text-info">
-					<p class="card-text" th:text="${forecast.date}">周五</p>
-					<p class="card-text" th:text="${forecast.type}">晴转多云</p>
-					<p class="card-text" th:text="${forecast.high}">高温 28℃</p>
-					<p class="card-text" th:text="${forecast.low}">低温 21℃</p>
-					<p class="card-text" th:text="${forecast.fengxiang}">无持续风向微风</p>
+			<div class="row">
+				<div class="card border-info" th:each="forecast : ${reportModel.report.forecast}">
+					<div class="card-body text-info">
+						<p class="card-text" th:text="${forecast.date}">周五</p>
+						<p class="card-text" th:text="${forecast.type}">晴转多云</p>
+						<p class="card-text" th:text="${forecast.high}">高温 28℃</p>
+						<p class="card-text" th:text="${forecast.low}">低温 21℃</p>
+						<p class="card-text" th:text="${forecast.fengxiang}">无持续风向微风</p>
+					</div>
 				</div>
 			</div>
 		</div>
+		<div th:if="${reportModel.report}==null">
+			<div class="row">
+				<p>天气数据API服务暂时不可用!</p>
+			</div>
+		</div>
+
 	</div>
 
 
@@ -69,6 +78,6 @@
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
 		integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
 		crossorigin="anonymous"></script>
-	<script th:src="@{/js/weather/report.js}"></script>
+	<script th:src="@{/report/js/weather/report.js}"></script>
 </body>
 </html>

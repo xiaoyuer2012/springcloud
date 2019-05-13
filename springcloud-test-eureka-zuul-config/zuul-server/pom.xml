@@ -9,7 +9,6 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.demo</groupId>
     <artifactId>zuul-server</artifactId>
 
     <dependencies>
@@ -23,6 +22,15 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <finalName>zuul</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>

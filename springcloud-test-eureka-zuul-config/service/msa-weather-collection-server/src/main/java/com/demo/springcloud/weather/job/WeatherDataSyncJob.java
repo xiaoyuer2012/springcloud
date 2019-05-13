@@ -2,9 +2,9 @@ package com.demo.springcloud.weather.job;
 
 import java.util.List;
 
-import com.demo.springcloud.weather.api.ApiClient;
-import com.demo.springcloud.weather.api.vo.CityVo;
+import com.demo.springcloud.weather.CityClientApi;
 import com.demo.springcloud.weather.service.WeatherDataCollectionService;
+import com.demo.springcloud.weather.vo.CityVo;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.slf4j.Logger;
@@ -25,7 +25,7 @@ public class WeatherDataSyncJob extends QuartzJobBean {
 	@Autowired
 	private WeatherDataCollectionService weatherDataCollectionService;
 	@Autowired
-	private ApiClient apiClient;
+	private CityClientApi clientApi;
 	@Override
 	protected void executeInternal(JobExecutionContext context) throws JobExecutionException {
 		logger.info("Start 天气数据同步任务");
@@ -35,7 +35,7 @@ public class WeatherDataSyncJob extends QuartzJobBean {
 		List<CityVo> cityList = null;
 		try {
 			// TODO 调用城市数据API
-			cityList = apiClient.listCity();
+			cityList = clientApi.listCity();
 			
 		} catch (Exception e) {
 			logger.error("获取城市信息异常！", e);

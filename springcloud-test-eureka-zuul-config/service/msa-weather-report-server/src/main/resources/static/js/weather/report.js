@@ -11,7 +11,7 @@
 $(function() {
 	$("#selectCityId").change(function(){
 		var cityId=$("#selectCityId").val();  //获取Select选择的Value
-		var url = '/report/cityId/' + cityId;
+		var url = '/report/report/cityId/' + cityId;
 		window.location.href= url;
 	});
 });

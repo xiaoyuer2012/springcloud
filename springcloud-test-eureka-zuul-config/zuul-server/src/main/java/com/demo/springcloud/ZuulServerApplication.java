@@ -15,8 +15,8 @@ public class ZuulServerApplication {
     }
 
     //将过滤器交给Spring管理
-    // @Bean
-//    public TokenFilter tokenFilter(){
-//        return new TokenFilter();
-//    }
+     @Bean
+    public TokenFilter tokenFilter(){
+        return new TokenFilter();
+    }
 }
